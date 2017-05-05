@@ -1,0 +1,14 @@
+// Place your settings in this file to overwrite the default settings
+{
+  "editor.tabSize": 2,
+  "editor.renderWhitespace": "boundary",
+  "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
+  "workbench.colorTheme": "Atom One Dark",
+  "workbench.iconTheme": "vscode-icons",
+  "window.title": "${activeEditorLong}${separator}${rootName}",
+  "editor.minimap.enabled": true,
+  "editor.minimap.renderCharacters": false,
+  "go.gopath": "/Users/cleung/code/go",
+  "vsicons.dontShowNewVersionMessage": true,
+  "window.zoomLevel": 0
+}
