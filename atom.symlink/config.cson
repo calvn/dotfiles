@@ -1,45 +1,23 @@
 "*":
   core:
-    disabledPackages: [
-      "background-tips"
-      "exception-reporting"
-      "metrics"
-    ]
-    followSymlinks: false
-    hideGitIgnoredFiles: true
-    ignoredNames: [
-      ".bundle"
-      ".git"
-      "log"
-      "repositories"
-      "tmp"
-      "vendor"
-    ]
-    telemetryConsent: "no"
+    telemetryConsent: "limited"
   editor:
-    fontFamily: "Menlo"
-    fontSize: 15
+    fontSize: 12
     invisibles: {}
     showIndentGuide: true
-    softWrapAtPreferredLineLength: true
+    showInvisibles: true
+    softWrap: true
+  "exception-reporting":
+    userId: "07153a4d-b08f-ebfd-6735-4e5c688ceff6"
   "go-plus":
-    panelDisplayMode: "closed"
-  "linter-eslint":
-    useGlobalEslint: true
-  "prettier-atom":
-    formatOnSaveOptions:
-      enabled: true
-  "release-notes":
-    viewedVersion: "0.89.0"
-  "spell-check":
-    grammars: [
-      "text.plain"
-      "source.gfm"
-      "text.git-commit"
-      "text.html.basic"
-    ]
+    currentPanelHeight: "17.532467532467532vh"
+    lint: {}
+    test:
+      coverageHighlightMode: "disabled"
+  "gometalinter-linter": {}
+  "linter-docker": {}
+  "tester-go":
+    coverageHighlightMode: "disabled"
+  "tree-view": {}
   welcome:
     showOnStartup: false
-".js.jsx.react.source":
-  editor:
-    autoIndent: true

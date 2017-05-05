@@ -1,4 +1,6 @@
-if test ! $(which spoof)
+if [ ! -d ~/.zsh-nvm ]
 then
-  sudo npm install spoof -g
+  git clone https://github.com/lukechilds/zsh-nvm.git ~/.zsh-nvm
 fi
+
+exit 0

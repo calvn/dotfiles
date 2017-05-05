@@ -62,7 +62,7 @@ link_file () {
     if [ "$overwrite_all" == "false" ] && [ "$backup_all" == "false" ] && [ "$skip_all" == "false" ]
     then
 
-      local currentSrc="$(readlink $dst)"
+      local currentSrc="$(readlink "$dst")"
 
       if [ "$currentSrc" == "$src" ]
       then
@@ -137,14 +137,39 @@ install_dotfiles () {
   done
 }
 
+setup_vscode() {
+  local overwrite_all=false backup_all=false skip_all=false
+
+  src="$DOTFILES_ROOT/vscode"
+  if [ -d $src ] 
+  then
+    dst="$HOME/Library/Application Support/Code/User"
+    mkdir -p "$dst"
+    link_file "$src" "$dst"
+  fi
+}
+
+setup_godir () {
+  if zsh -c "source ${HOME}/.zshrc"
+  then
+    if ! [ -d "${PROJECTS}/go" ]
+    then
+      mkdir -p "${PROJECTS}/go"
+      success "created ${PROJECTS}/go directory"
+    fi
+  fi
+}
+
 setup_gitconfig
 install_dotfiles
+setup_vscode
+setup_godir
 
 # If we're on a Mac, let's install and setup homebrew.
 if [ "$(uname -s)" == "Darwin" ]
 then
   info "installing dependencies"
-  if source bin/dot > /tmp/dotfiles-dot 2>&1
+  if source bin/dot | while read -r data; do info "$data"; done
   then
     success "dependencies installed"
   else
@@ -152,5 +177,4 @@ then
   fi
 fi
 
-echo ''
-echo '  All installed!'
+info 'All installed!'
