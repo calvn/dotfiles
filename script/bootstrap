@@ -152,10 +152,10 @@ setup_vscode() {
 setup_godir () {
   if zsh -c "source ${HOME}/.zshrc"
   then
-    if ! [ -d "${PROJECTS}/go" ]
+    if ! [ -d "${HOME}/go" ]
     then
-      mkdir -p "${PROJECTS}/go"
-      success "created ${PROJECTS}/go directory"
+      mkdir -p "${HOME}/go"
+      success "created ${HOME}/go directory"
     fi
   fi
 }
