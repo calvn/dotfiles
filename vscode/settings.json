@@ -10,5 +10,9 @@
   "editor.minimap.renderCharacters": false,
   "go.gopath": "/Users/cleung/code/go",
   "vsicons.dontShowNewVersionMessage": true,
-  "window.zoomLevel": 0
+  "window.zoomLevel": 0,
+  "go.enableCodeLens": {
+    "references": true,
+    "runtest": false
+  }
 }
