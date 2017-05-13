@@ -8,11 +8,11 @@
   "window.title": "${activeEditorLong}${separator}${rootName}",
   "editor.minimap.enabled": true,
   "editor.minimap.renderCharacters": false,
-  "go.gopath": "/Users/cleung/code/go",
+  "go.gopath": "/Users/cleung/go",
   "vsicons.dontShowNewVersionMessage": true,
   "window.zoomLevel": 0,
   "go.enableCodeLens": {
-    "references": true,
+    "references": false,
     "runtest": false
   }
 }
