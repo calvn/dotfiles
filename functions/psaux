@@ -1,0 +1,13 @@
+#!/bin/sh
+#
+# Usage: psaux <expression>
+# Description: Pretty-prints matching processes from ps aux
+#
+# credit: https://sittinginoblivion.com/wiki/include-column-headers-when-piping-ps-grep
+psaux() {
+  if [[ -n "$1" ]];then
+    ps aux | head -1 && ps aux | grep "$1" | grep -v grep
+  else
+    echo 'You must supply a grep search expression!'
+  fi
+}

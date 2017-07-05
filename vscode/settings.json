@@ -1,5 +1,6 @@
 // Place your settings in this file to overwrite the default settings
 {
+  "editor.disableTranslate3d": true,
   "editor.tabSize": 2,
   "editor.renderWhitespace": "boundary",
   "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
@@ -14,5 +15,7 @@
   "go.enableCodeLens": {
     "references": false,
     "runtest": false
-  }
+  },
+  "editor.renderControlCharacters": false,
+  "vim.disableAnnoyingNeovimMessage": true
 }
