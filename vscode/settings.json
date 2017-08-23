@@ -4,7 +4,6 @@
   "editor.tabSize": 2,
   "editor.renderWhitespace": "boundary",
   "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
-  "workbench.colorTheme": "Atom One Dark",
   "workbench.iconTheme": "vscode-icons",
   "window.title": "${activeEditorLong}${separator}${rootName}",
   "editor.minimap.enabled": true,
@@ -16,6 +15,8 @@
     "references": false,
     "runtest": false
   },
+  "go.coverageDecorator": "gutter",
   "editor.renderControlCharacters": false,
-  "vim.disableAnnoyingNeovimMessage": true
+  "vim.disableAnnoyingNeovimMessage": true,
+  "workbench.colorTheme": "Atom One Dark"
 }
