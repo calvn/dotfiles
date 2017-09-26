@@ -1,0 +1,92 @@
+scriptencoding utf-8
+set encoding=utf-8
+
+" Home path
+if has("nvim")
+    " Neovim
+    let g:vim_home_path = "~/nvim"
+elseif has("win32")
+    " We're on Windows.
+    let g:vim_home_path = "~/vimfiles"
+else
+    " We're on some POSIX system, hopefully.
+    let g:vim_home_path = "~/.vim"
+endif
+
+"----------------------------------------------------------------------
+" Plugins
+"----------------------------------------------------------------------
+call plug#begin(g:vim_home_path . "/plugged")
+Plug 'airblade/vim-gitgutter'         " Show diff information in the gutter
+Plug 'chrisbra/Colorizer'             " Color hex codes and color names
+Plug 'ctrlpvim/ctrlp.vim'             " Fast file switching
+Plug 'dracula/vim'                    " A dark theme for Vim
+Plug 'easymotion/vim-easymotion'      " Simplified Vim motion
+Plug 'fatih/vim-go'                   " Go support
+Plug 'fatih/vim-hclfmt'               " HCL formatting
+Plug 'gcmt/taboo.vim'                 " Utilities for pretty tabs
+Plug 'godlygeek/tabular'              " Smart tabularizing
+Plug 'othree/yajs.vim'                " JavaScript Syntax
+Plug 'plasticboy/vim-markdown'        " Better Markdown handling
+Plug 'tpope/vim-eunuch'               " Helpers for UNIX
+Plug 'tpope/vim-fugitive'             " Git handling inside vim
+Plug 'vim-airline/vim-airline'        " Lean & mean status/tabline
+Plug 'vim-airline/vim-airline-themes' " A collection of themes for vim-airline
+call plug#end()
+
+"----------------------------------------------------------------------
+" Global settings
+"----------------------------------------------------------------------
+let mapleader = ";"
+syntax enable                       " enable syntax processing
+set modeline                        " turn on modeline processing
+set modelines=4                     " look at beginning or end of file
+set hidden                          " allow buffers to live in the background with changes
+set history=1000                    " remember a lot of history
+set title                           " change the terminal's title
+set visualbell                      " don't beep
+set noerrorbells                    " don't beep
+
+" Whitespace settings
+set wrap                " wrap lines
+set linebreak           " only wrap at characters in 'breakat'
+set nolist              " list disables linebreak
+set whichwrap&          " don't have left/right move to new lines
+set tabstop=4           " number of visual spaces per TAB
+set softtabstop=4       " number of spaces in tab when editing
+set shiftwidth=4        " without this it does two tab stops recently, not sure why
+
+" UI settings
+set autoread              " Reload files that have not been modified
+set backspace=2           " Makes backspace not behave all retarded-like
+set number                " show line numbers
+set ruler                 " Show the line number and column in the status bar
+set cursorline            " highlight current line
+set showcmd               " show command in bottom bar
+set wildmenu              " visual autocomplete for command menu
+set lazyredraw            " redraw only when we need to
+set showmatch             " highlight matching braces
+set pastetoggle=<F2>      " use F2 to switch into paste mode
+set mouse=a               " allow capturing the mouse for scrolling
+set showmode              " Show the current mode on the open buffer
+set laststatus=2          " Always show the status line
+set splitbelow            " Splits show up below by default
+set splitright            " Splits go to the right by default
+set t_Co=256              " enable 256 colors
+
+
+filetype plugin indent on " load filetype-specific and plugin-specific indent files
+
+set list                  " show whitespace/invisble characters
+set listchars=tab:›\ ,eol:¬,trail:⋅ " Set the characters for the invisibles
+
+" Search settings
+set incsearch           " search as characters are entered
+set hlsearch            " highlight matches
+set ignorecase          " ignore case when searching
+set smartcase           " but be smart about capitalization
+
+nnoremap <leader><space> :nohlsearch<CR>
+
+" Airline
+let g:airline_powerline_fonts = 1
