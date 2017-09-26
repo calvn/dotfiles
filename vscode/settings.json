@@ -8,9 +8,9 @@
   "window.title": "${activeEditorLong}${separator}${rootName}",
   "editor.minimap.enabled": true,
   "editor.minimap.renderCharacters": false,
-  "go.gopath": "/Users/cleung/go",
   "vsicons.dontShowNewVersionMessage": true,
   "window.zoomLevel": 0,
+  "go.gopath": "/Users/cleung/go",
   "go.enableCodeLens": {
     "references": false,
     "runtest": false
