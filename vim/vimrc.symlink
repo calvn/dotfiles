@@ -20,7 +20,7 @@ call plug#begin(g:vim_home_path . "/plugged")
 Plug 'airblade/vim-gitgutter'         " Show diff information in the gutter
 Plug 'chrisbra/Colorizer'             " Color hex codes and color names
 Plug 'ctrlpvim/ctrlp.vim'             " Fast file switching
-Plug 'dracula/vim'                    " A dark theme for Vim
+Plug 'rakr/vim-one'                   " Atom One Dark theme for Vim
 Plug 'easymotion/vim-easymotion'      " Simplified Vim motion
 Plug 'fatih/vim-go'                   " Go support
 Plug 'fatih/vim-hclfmt'               " HCL formatting
@@ -28,6 +28,7 @@ Plug 'gcmt/taboo.vim'                 " Utilities for pretty tabs
 Plug 'godlygeek/tabular'              " Smart tabularizing
 Plug 'othree/yajs.vim'                " JavaScript Syntax
 Plug 'plasticboy/vim-markdown'        " Better Markdown handling
+Plug 'scrooloose/nerdtree'            " Tree view file explorer
 Plug 'tpope/vim-eunuch'               " Helpers for UNIX
 Plug 'tpope/vim-fugitive'             " Git handling inside vim
 Plug 'vim-airline/vim-airline'        " Lean & mean status/tabline
@@ -38,7 +39,6 @@ call plug#end()
 " Global settings
 "----------------------------------------------------------------------
 let mapleader = ";"
-syntax enable                       " enable syntax processing
 set modeline                        " turn on modeline processing
 set modelines=4                     " look at beginning or end of file
 set hidden                          " allow buffers to live in the background with changes
@@ -88,5 +88,34 @@ set smartcase           " but be smart about capitalization
 
 nnoremap <leader><space> :nohlsearch<CR>
 
-" Airline
-let g:airline_powerline_fonts = 1
+syntax on                   " enable syntax processing
+let g:airline_theme='one'   " Use Atoms one theme
+let g:one_allow_italics = 1 " enable italic for comments
+set background=dark
+colorscheme one
+
+" NERDTree
+map <C-n> :NERDTreeToggle<CR>
+autocmd StdinReadPre * let s:std_in=1
+autocmd vimenter * NERDTree   " Open on startup
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif " Open even if no file specified
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif " Open when opening directories
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif " Close vim if tree is the only open window
+
+
+" Window settings
+map <Tab> <C-W>w
+map <S-Tab> <C-W>p
+
+" Tab settings
+map <C-t> :tabnew<CR>
+map <C-c> :tabclose<CR>
+map <C-h> :tabprevious<CR>
+map <C-l> :tabnext<CR>
+
+" Backup settings
+set backup
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set backupskip=/tmp/*,/private/tmp/*
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set writebackup
