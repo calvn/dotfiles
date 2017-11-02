@@ -18,5 +18,7 @@
   "go.coverageDecorator": "gutter",
   "editor.renderControlCharacters": false,
   "vim.disableAnnoyingNeovimMessage": true,
-  "workbench.colorTheme": "Atom One Dark"
+  "workbench.colorTheme": "Atom One Dark",
+  "rewrap.wrappingColumn": 80,
+  "gitlens.blame.line.enabled": false
 }
