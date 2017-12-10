@@ -20,5 +20,15 @@
   "vim.disableAnnoyingNeovimMessage": true,
   "workbench.colorTheme": "Atom One Dark",
   "rewrap.wrappingColumn": 80,
-  "gitlens.blame.line.enabled": false
+  "gitlens.blame.line.enabled": false,
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressUpdateNotice": true,
+    "suppressWelcomeNotice": true
+  }
 }

@@ -45,6 +45,7 @@ cask 'virtualbox'
 cask 'visual-studio-code'
 cask 'zoomus'
 
-
 mas 'Spark', id: 1176895641
 mas 'Todoist', id: 585829637
+mas 'Xcode', id: 497799835
+mas '1Password', id: 443987910
