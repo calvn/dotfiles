@@ -17,7 +17,6 @@
   },
   "go.coverageDecorator": "gutter",
   "editor.renderControlCharacters": false,
-  "vim.disableAnnoyingNeovimMessage": true,
   "workbench.colorTheme": "Atom One Dark",
   "rewrap.wrappingColumn": 80,
   "gitlens.blame.line.enabled": false,
@@ -30,5 +29,8 @@
     "suppressNoRepositoryWarning": false,
     "suppressUpdateNotice": true,
     "suppressWelcomeNotice": true
-  }
+  },
+  "problems.decorations.enabled": false,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.enabled": false
 }
