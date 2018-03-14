@@ -1,6 +1,5 @@
 // Place your settings in this file to overwrite the default settings
 {
-  "editor.disableTranslate3d": true,
   "editor.tabSize": 2,
   "editor.renderWhitespace": "boundary",
   "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
@@ -19,7 +18,6 @@
   "editor.renderControlCharacters": false,
   "workbench.colorTheme": "Atom One Dark",
   "rewrap.wrappingColumn": 80,
-  "gitlens.blame.line.enabled": false,
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": false,
     "suppressCommitNotFoundWarning": false,
@@ -32,5 +30,9 @@
   },
   "problems.decorations.enabled": false,
   "gitlens.currentLine.enabled": false,
-  "gitlens.hovers.currentLine.enabled": false
+  "gitlens.hovers.currentLine.enabled": false,
+  "gitlens.keymap": "alternate",
+  "vsicons.associations.files": [
+    { "icon": "terraform", "extensions": ["tf"], "format": "svg" }
+  ]
 }
