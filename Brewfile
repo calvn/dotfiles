@@ -29,8 +29,6 @@ brew 'wget'
 brew 'yarn'
 brew 'zsh'
 
-
-cask 'atom'
 cask 'docker'
 cask 'dropbox'
 cask 'duet'
@@ -42,11 +40,12 @@ cask 'ngrok'
 cask 'postman'
 cask 'slack'
 cask 'spectacle'
+cask 'vagrant'
 cask 'virtualbox'
 cask 'visual-studio-code'
 cask 'zoomus'
 
-mas '1Password', id: 443987910
+mas '1Password 7', id: 1333542190
 mas 'Bear', id: 1091189122
 mas 'Kindle', id: 405399194
 mas 'Spark', id: 1176895641

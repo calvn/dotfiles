@@ -5,7 +5,7 @@
   "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
   "workbench.iconTheme": "vscode-icons",
   "window.title": "${activeEditorLong}${separator}${rootName}",
-  "editor.minimap.enabled": true,
+  "editor.minimap.enabled": false,
   "editor.minimap.renderCharacters": false,
   "vsicons.dontShowNewVersionMessage": true,
   "window.zoomLevel": 0,
@@ -14,7 +14,9 @@
     "references": false,
     "runtest": false
   },
-  "go.coverageDecorator": "gutter",
+  "go.coverageDecorator": {
+    "type": "gutter"
+  },
   "editor.renderControlCharacters": false,
   "workbench.colorTheme": "Atom One Dark",
   "rewrap.wrappingColumn": 80,
@@ -25,14 +27,25 @@
     "suppressGitVersionWarning": false,
     "suppressLineUncommittedWarning": false,
     "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": false,
+    "suppressShowKeyBindingsNotice": true,
     "suppressUpdateNotice": true,
     "suppressWelcomeNotice": true
   },
   "problems.decorations.enabled": false,
   "gitlens.currentLine.enabled": false,
   "gitlens.hovers.currentLine.enabled": false,
-  "gitlens.keymap": "alternate",
+  "gitlens.keymap": "chorded",
   "vsicons.associations.files": [
     { "icon": "terraform", "extensions": ["tf"], "format": "svg" }
-  ]
+  ],
+  "gitlens.resultsExplorer.files.layout": "auto",
+  "gitlens.historyExplorer.enabled": true,
+  "gitlens.gitExplorer.files.layout": "auto",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "workbench.colorCustomizations": {
+    "terminal.foreground" : "#00f900",
+    "terminal.background" : "#000000",
+    "terminal.border": "#ff0000"
+  }
 }

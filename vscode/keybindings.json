@@ -23,5 +23,20 @@
     "key": "enter",
     "command": "list.select",
     "when": "filesExplorerFocus"
+  },
+  {
+    "key": "shift+cmd+r",
+    "command": "git.revertSelectedRanges",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+r",
+    "command": "rewrap.rewrapComment",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+q",
+    "command": "-rewrap.rewrapComment",
+    "when": "editorTextFocus"
   }
 ]
