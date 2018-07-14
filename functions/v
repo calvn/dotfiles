@@ -1,0 +1,14 @@
+#!/bin/sh
+#
+# Usage: v <number of clusters>
+# Description: Pretty-prints matching processes from ps aux
+#
+# TODO: Output log separately in /tmp
+v() {
+  if [[ $1 =~ ^[0-9]+$ ]]; then
+    for ((i=0;i<$1;i++)); do
+      port=$((8200 + $i * 2))
+      vault server -dev -dev-root-token-id=root -dev-listen-address=127.0.0.1:$port -dev-ha -dev-transactional -log-level=trace &
+    done
+  fi
+}
