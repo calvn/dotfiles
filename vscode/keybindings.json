@@ -1,15 +1,6 @@
 // Place your key bindings in this file to overwrite the defaults
 [
   {
-    "key": "ctrl+`",
-    "command": "workbench.action.terminal.toggleTerminal"
-  },
-  {
-    "key": "ctrl+`",
-    "command": "workbench.action.terminal.focus",
-    "when": "!terminalFocus"
-  },
-  {
     "key": "cmd+n",
     "command": "explorer.newFile",
     "when": "!editorFocus"
@@ -38,5 +29,21 @@
     "key": "alt+q",
     "command": "-rewrap.rewrapComment",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+k j",
+    "command": "workbench.action.toggleMaximizedPanel"
+  },
+  {
+    "key": "alt+cmd+o",
+    "command": "git.openFile"
+  },
+  {
+    "key": "alt+cmd+p",
+    "command": "git.openChange"
+  },
+  {
+    "key": "alt+cmd+o",
+    "command": "git.openFile2"
   }
 ]
