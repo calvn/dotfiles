@@ -45,5 +45,17 @@
   {
     "key": "alt+cmd+o",
     "command": "git.openFile2"
+  },
+  {
+    "key": "cmd+k a",
+    "command": "workbench.action.focusActiveEditorGroup"
+  },
+  {
+    "key": "alt+cmd+g f",
+    "command": "gitlens.openWorkingFile"
+  },
+  {
+    "key": "cmd+k t",
+    "command": "workbench.action.terminal.focus"
   }
 ]

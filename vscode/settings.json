@@ -48,5 +48,13 @@
     "terminal.background" : "#000000",
     "terminal.border": "#ff0000"
   },
-  "terminal.integrated.scrollback": 10000
+  "terminal.integrated.scrollback": 10000,
+  "editor.cursorBlinking": "solid",
+  "editor.cursorStyle": "block",
+  "gitlens.views.repositories.files.layout": "auto",
+  "gitlens.views.fileHistory.enabled": true,
+  "gitlens.views.lineHistory.enabled": true,
+  "gitlens.views.compare.files.layout": "auto",
+  "gitlens.views.search.files.layout": "auto",
+  "terminal.integrated.rendererType": "dom"
 }
