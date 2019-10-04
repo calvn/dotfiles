@@ -3,11 +3,9 @@
   "editor.tabSize": 2,
   "editor.renderWhitespace": "boundary",
   "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
-  "workbench.iconTheme": "vscode-icons",
   "window.title": "${activeEditorLong}${separator}${rootName}",
   "editor.minimap.enabled": false,
   "editor.minimap.renderCharacters": false,
-  "vsicons.dontShowNewVersionMessage": true,
   "window.zoomLevel": 0,
   "go.gopath": "/Users/cleung/go",
   "go.enableCodeLens": {
@@ -36,9 +34,6 @@
   "gitlens.currentLine.enabled": false,
   "gitlens.hovers.currentLine.enabled": false,
   "gitlens.keymap": "chorded",
-  "vsicons.associations.files": [
-    { "icon": "terraform", "extensions": ["tf"], "format": "svg" }
-  ],
   "gitlens.resultsExplorer.files.layout": "auto",
   "gitlens.historyExplorer.enabled": true,
   "gitlens.gitExplorer.files.layout": "auto",
@@ -56,5 +51,6 @@
   "gitlens.views.lineHistory.enabled": true,
   "gitlens.views.compare.files.layout": "auto",
   "gitlens.views.search.files.layout": "auto",
-  "terminal.integrated.rendererType": "dom"
+  "terminal.integrated.rendererType": "dom",
+  "go.useLanguageServer": true
 }

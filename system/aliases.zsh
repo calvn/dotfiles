@@ -8,3 +8,8 @@ then
   alias ll="gls -l --color"
   alias la='gls -A --color'
 fi
+
+if test $(which kubectl)
+then
+  alias kc="kubectl"
+fi
