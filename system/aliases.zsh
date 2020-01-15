@@ -13,3 +13,10 @@ if test $(which kubectl)
 then
   alias kc="kubectl"
 fi
+
+# Vault dev server
+if test $(which vault)
+then
+  alias vlt-dev="vault server -dev -dev-root-token-id=root"
+  alias vlt-ent-build="make premdev"
+fi

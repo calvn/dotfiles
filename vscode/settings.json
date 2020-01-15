@@ -51,6 +51,6 @@
   "gitlens.views.lineHistory.enabled": true,
   "gitlens.views.compare.files.layout": "auto",
   "gitlens.views.search.files.layout": "auto",
-  "terminal.integrated.rendererType": "dom",
-  "go.useLanguageServer": true
+  "go.useLanguageServer": true,
+  "terminal.explorerKind": "external"
 }
