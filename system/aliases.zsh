@@ -9,14 +9,7 @@ then
   alias la='gls -A --color'
 fi
 
-if test $(which kubectl)
+if $(command -v kubectl &>/dev/null)
 then
   alias kc="kubectl"
-fi
-
-# Vault dev server
-if test $(which vault)
-then
-  alias vlt-dev="vault server -dev -dev-root-token-id=root"
-  alias vlt-ent-build="make premdev"
 fi
