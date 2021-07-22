@@ -40,3 +40,7 @@
 	insteadOf = https://github.com/
 [pull]
 	ff = only
+[init]
+	defaultBranch = main
+[user]
+	email = 1883212+calvn@users.noreply.github.com

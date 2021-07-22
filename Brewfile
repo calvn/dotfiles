@@ -23,7 +23,7 @@ brew 'mas'
 brew 'neovim'
 brew 'protobuf'
 brew 'pyenv'
-brew 'the_silver_searcher'
+brew 'ripgrep'
 brew 'tree'
 brew 'unrar'
 brew 'watch'
@@ -44,7 +44,6 @@ cask 'postman'
 cask 'slack'
 cask 'spectacle'
 cask 'visual-studio-code'
-cask 'zoomus'
 
 mas '1Password 7', id: 1333542190
 mas 'Bear', id: 1091189122

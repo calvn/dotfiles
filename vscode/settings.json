@@ -6,8 +6,7 @@
   "window.title": "${activeEditorLong}${separator}${rootName}",
   "editor.minimap.enabled": false,
   "editor.minimap.renderCharacters": false,
-  "window.zoomLevel": 0,
-  "go.gopath": "/Users/cleung/go",
+  "go.gopath": "/Users/calvin/go",
   "go.enableCodeLens": {
     "references": false,
     "runtest": false
@@ -52,5 +51,6 @@
   "gitlens.views.compare.files.layout": "auto",
   "gitlens.views.search.files.layout": "auto",
   "go.useLanguageServer": true,
-  "terminal.explorerKind": "external"
+  "terminal.explorerKind": "external",
+  "vim.useSystemClipboard": true
 }
