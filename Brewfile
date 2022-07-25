@@ -27,8 +27,6 @@ brew 'unar'
 brew 'watch'
 brew 'watchman'
 brew 'wget'
-brew 'yarn'
-brew 'zsh'
 
 cask 'discord' 
 cask 'docker'

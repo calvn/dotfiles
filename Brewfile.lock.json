@@ -17,7 +17,7 @@
         "revision": "643974cf5dc414e5d54539c46347b2c64b1871c5"
       },
       "homebrew/core": {
-        "revision": "33789849bc90e713f6980f143291997f370c9346"
+        "revision": "034b958e3f27df68511711b2360e6f1e43d1e44f"
       }
     },
     "brew": {
@@ -1099,6 +1099,20 @@
             }
           }
         }
+      },
+      "nvm": {
+        "version": "0.39.1_1",
+        "bottle": {
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core",
+          "files": {
+            "all": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/nvm/blobs/sha256:6e14c8a2bf94212545c1ebac9a722df168c318d0e8af2fc75b729a07fea54efe",
+              "sha256": "6e14c8a2bf94212545c1ebac9a722df168c318d0e8af2fc75b729a07fea54efe"
+            }
+          }
+        }
       }
     },
     "cask": {
@@ -1342,7 +1356,7 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.5.6",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "33789849bc90e713f6980f143291997f370c9346",
+        "Homebrew/homebrew-core": "034b958e3f27df68511711b2360e6f1e43d1e44f",
         "CLT": "13.4.0.0.1.1651278267",
         "Xcode": "13.4.1",
         "macOS": "12.5"
