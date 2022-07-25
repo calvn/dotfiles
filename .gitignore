@@ -7,3 +7,5 @@ git/gitconfig.local.symlink
 
 vscode/workspaceStorage
 vscode/globalStorage
+
+Brewfile.lock.json

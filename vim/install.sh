@@ -1,11 +1,16 @@
 #!/bin/sh
 
 # Install vim-plug for vim
-if [ ! -f ~/.vim/autoload/plug.vim ]
+if [ ! -f ~/.vim/autoload/plug.vim ] ||  [ ! -d ~/.vim/plugged ]
 then
   echo "  Installing vim-plug onto vim directory"
-  curl -fLos ~/.vim/autoload/plug.vim --create-dirs \
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    
+    if [ ! -d ~/.vim/plugged ]
+    then
+      vim +'PlugInstall --sync' +qa
+    fi
 fi
 
 # Install vim-plug for neovim
