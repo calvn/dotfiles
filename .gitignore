@@ -5,7 +5,9 @@ atom.symlink/*
 
 git/gitconfig.local.symlink
 
-vscode/workspaceStorage
-vscode/globalStorage
+vscode/*
+!vscode/snippets
+!vscode/keybindings.json
+!vscode/settings.json
 
 Brewfile.lock.json
