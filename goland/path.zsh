@@ -1,0 +1,1 @@
+export PATH="/Applications/GoLand.app/Contents/MacOS:$PATH"

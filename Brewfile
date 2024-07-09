@@ -1,6 +1,4 @@
 tap 'homebrew/bundle'
-tap 'homebrew/cask'
-tap 'homebrew/core' 
 
 cask_args appdir: '/Applications'
 
@@ -28,6 +26,7 @@ brew 'watch'
 brew 'watchman'
 brew 'wget'
 
+cask 'alfred'
 cask 'discord' 
 cask 'docker'
 cask 'google-chrome'
