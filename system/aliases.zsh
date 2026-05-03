@@ -1,7 +1,7 @@
 # grc overides for ls
 #   Made possible through contributions from generous benefactors like
 #   `brew install coreutils`
-if $(gls &>/dev/null)
+if (( $+commands[gls] ))
 then
   alias ls="gls -F --color"
   alias l="gls -lLAh --color"
@@ -9,7 +9,7 @@ then
   alias la='gls -A --color'
 fi
 
-if $(command -v kubectl &>/dev/null)
+if (( $+commands[kubectl] ))
 then
   alias kc="kubectl"
 fi

@@ -10,7 +10,7 @@ else
 fi
 
 git_dirty() {
-  if $(! $git status -s &> /dev/null)
+  if ! $git status -s &> /dev/null
   then
     echo ""
   else
@@ -35,9 +35,9 @@ git_remote_info () {
 }
 
 need_push () {
-  if [ $($git rev-parse --is-inside-work-tree 2>/dev/null) ]
+  if $git rev-parse --is-inside-work-tree >/dev/null 2>&1
   then
-    number=$($git cherry -v @{upstream} 2>/dev/null | wc -l | bc)
+    number=$($git cherry -v @{upstream} 2>/dev/null | wc -l | tr -d ' ')
 
     if [[ $number == 0 ]]
     then

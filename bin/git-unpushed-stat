@@ -2,8 +2,12 @@
 #
 # Show the diffstat of everything you haven't pushed yet.
 
-branch=$(git rev-parse --abbrev-ref HEAD)
-count=$(git rev-list --count HEAD origin/$branch...HEAD)
+upstream=$(git rev-parse --abbrev-ref --symbolic-full-name @{upstream} 2>/dev/null) || {
+  echo "No upstream configured for the current branch."
+  exit 1
+}
+
+count=$(git rev-list --count "$upstream"...HEAD)
 
 if [ "$count" -eq "1" ]
 then
@@ -12,5 +16,5 @@ else
   s='s'
 fi
 
-git diff --stat origin/$branch..HEAD
+git diff --stat "$upstream"..HEAD
 echo " $count commit$s total"

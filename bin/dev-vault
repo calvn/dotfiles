@@ -1,13 +1,13 @@
-#!/bin/sh
+#!/usr/bin/env bash
 #
 # Start up a dev vault server
 
 function start_vault_dev() {
-  if [ -z $1 ]; then
+  if [ -z "$1" ]; then
     vault server -dev -dev-root-token-id=root -log-level=trace
-  elif [ $1 == '3n' ]; then
+  elif [ "$1" == '3n' ]; then
     vault server -dev -dev-root-token-id=root -dev-three-node -log-level=trace
-  elif [ $1 == '4c' ]; then
+  elif [ "$1" == '4c' ]; then
     vault server -dev -dev-root-token-id=root -dev-four-cluster -log-level=trace
   else
     echo "invalid mode provided: $1"
@@ -18,9 +18,9 @@ function start_vault_dev() {
 while test $# -gt 0; do
   case "$1" in
     -h|--help)
-      echo "$package - starts a dev vault server"
+      echo "$(basename "$0") - starts a dev vault server"
       echo " "
-      echo "$package [options]"
+      echo "$(basename "$0") [options]"
       echo " "
       echo "options:"
       echo "-h, --help               show brief help"
@@ -49,4 +49,4 @@ while test $# -gt 0; do
   esac
 done
 
-start_vault_dev $MODE
+start_vault_dev "$MODE"

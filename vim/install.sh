@@ -14,7 +14,7 @@ then
 fi
 
 # Install vim-plug for neovim
-if test $(which nvim) && [ ! -f ~/.local/share/nvim/site/autoload/plug.vim ]
+if command -v nvim >/dev/null 2>&1 && [ ! -f ~/.local/share/nvim/site/autoload/plug.vim ]
 then
   echo "  Installing vim-plug onto neovim data directory"
   curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \

@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # Install go tools
-if test $(which go) && test ! $(which pp)
+if command -v go >/dev/null 2>&1 && ! command -v pp >/dev/null 2>&1
 then
   echo "  Installing/upgrading panicparse"
-  go get github.com/maruel/panicparse/cmd/pp
+  go install github.com/maruel/panicparse/cmd/pp@latest
 fi

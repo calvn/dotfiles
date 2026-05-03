@@ -8,5 +8,22 @@
 #
 #   git nuke add-git-nuke
 
-git branch -D $1
-git push origin :$1
+branch=$1
+
+if [ -z "$branch" ]
+then
+  echo "Usage: git nuke <branch>"
+  exit 1
+fi
+
+current_branch=$(git rev-parse --abbrev-ref HEAD)
+default_branch=$(git symbolic-ref --short refs/remotes/origin/HEAD 2>/dev/null | sed 's#^origin/##')
+
+if [ "$branch" = "$current_branch" ] || [ "$branch" = "$default_branch" ] || [ "$branch" = "main" ] || [ "$branch" = "master" ]
+then
+  echo "Refusing to nuke protected branch: $branch"
+  exit 1
+fi
+
+git branch -D "$branch"
+git push origin ":$branch"

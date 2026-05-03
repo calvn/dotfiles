@@ -2,5 +2,9 @@
 #
 # Show the diff of everything you haven't pushed yet.
 
-branch=$(git rev-parse --abbrev-ref HEAD)
-git diff origin/$branch..HEAD
+upstream=$(git rev-parse --abbrev-ref --symbolic-full-name @{upstream} 2>/dev/null) || {
+  echo "No upstream configured for the current branch."
+  exit 1
+}
+
+git diff "$upstream"..HEAD

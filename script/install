@@ -4,11 +4,44 @@
 
 set -e
 
-cd "$(dirname $0)"/..
+cd "$(dirname "$0")"/..
+
+setup_homebrew_path() {
+  if command -v brew >/dev/null 2>&1
+  then
+    return
+  fi
+
+  for prefix in /opt/homebrew /usr/local
+  do
+    if [ -x "$prefix/bin/brew" ]
+    then
+      eval "$("$prefix/bin/brew" shellenv)"
+      return
+    fi
+  done
+}
+
+setup_homebrew_path
+
+if ! command -v brew >/dev/null 2>&1
+then
+  ./homebrew/install.sh
+  setup_homebrew_path
+fi
+
+if ! command -v brew >/dev/null 2>&1
+then
+  echo "Homebrew installed, but brew was not found on PATH."
+  exit 1
+fi
 
 # Run Homebrew through the Brewfile
 echo "› brew bundle"
 brew bundle
 
 # find the installers and run them iteratively
-find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
+find . -name install.sh -print0 | while IFS= read -r -d '' installer
+do
+  "$installer"
+done

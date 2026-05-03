@@ -2,11 +2,15 @@
 {
   "editor.tabSize": 2,
   "editor.renderWhitespace": "boundary",
-  "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.profiles.osx": {
+    "zsh": {
+      "path": "/bin/zsh"
+    }
+  },
   "window.title": "${activeEditorLong}${separator}${rootName}",
   "editor.minimap.enabled": false,
   "editor.minimap.renderCharacters": false,
-  "go.gopath": "/Users/calvin/go",
   "go.enableCodeLens": {
     "references": false,
     "runtest": false

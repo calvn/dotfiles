@@ -1,8 +1,6 @@
-# Local/private config goes in the include
+# Local/private config goes in the include.
 [include]
         path = ~/.gitconfig.local
-[hub]
-        protocol = https
 [alias]
         co = checkout
         promote = !$ZSH/bin/git-promote
@@ -34,13 +32,9 @@
         default = simple
 [credential]
 	helper = osxkeychain
-[http]
-	cookiefile = /Users/cleung/.gitcookies
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 [pull]
 	ff = only
 [init]
 	defaultBranch = main
-[user]
-	email = 1883212+calvn@users.noreply.github.com

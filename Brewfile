@@ -25,10 +25,12 @@ brew 'unar'
 brew 'watch'
 brew 'watchman'
 brew 'wget'
+brew 'zsh-autosuggestions'
 
 cask 'alfred'
 cask 'discord' 
-cask 'docker'
+cask 'docker-desktop'
+cask 'ghostty'
 cask 'google-chrome'
 cask 'istat-menus'
 cask 'iterm2'
@@ -41,7 +43,6 @@ cask 'visual-studio-code'
 cask 'zoom' 
 
 mas '1Password 7', id: 1333542190
-mas 'Bear', id: 1091189122
 mas 'Kindle', id: 405399194
 mas 'Spark', id: 1176895641
 mas 'Things', id: 904280696

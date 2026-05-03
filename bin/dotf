@@ -6,11 +6,34 @@
 # to make sure you're on the latest and greatest.
 export ZSH=$HOME/.dotfiles
 
+setup_homebrew_path() {
+  if command -v brew >/dev/null 2>&1
+  then
+    return
+  fi
+
+  for prefix in /opt/homebrew /usr/local
+  do
+    if [ -x "$prefix/bin/brew" ]
+    then
+      eval "$("$prefix/bin/brew" shellenv)"
+      return
+    fi
+  done
+}
+
 # Set macOS defaults
 $ZSH/macos/set-defaults.sh
 
 # Install homebrew
 $ZSH/homebrew/install.sh 2>&1
+setup_homebrew_path
+
+if ! command -v brew >/dev/null 2>&1
+then
+  echo "Homebrew installed, but brew was not found on PATH."
+  exit 1
+fi
 
 # Upgrade homebrew
 echo "› brew update"

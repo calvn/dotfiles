@@ -130,22 +130,24 @@ install_dotfiles () {
 
   local overwrite_all=false backup_all=false skip_all=false
 
-  for src in $(find -H "$DOTFILES_ROOT" -maxdepth 2 -name '*.symlink' -not -path '*.git*')
+  while IFS= read -r -d '' src
   do
     dst="$HOME/.$(basename "${src%.*}")"
     link_file "$src" "$dst"
-  done
+  done < <(find -H "$DOTFILES_ROOT" -maxdepth 2 -name '*.symlink' -not -path '*.git*' -print0)
 }
 
 setup_vscode() {
   local overwrite_all=false backup_all=false skip_all=false
 
   src="$DOTFILES_ROOT/vscode"
-  if [ -d $src ] 
+  if [ -d "$src" ]
   then
     dst="$HOME/Library/Application Support/Code/User"
     mkdir -p "$dst"
-    link_file "$src" "$dst"
+    link_file "$src/settings.json" "$dst/settings.json"
+    link_file "$src/keybindings.json" "$dst/keybindings.json"
+    link_file "$src/snippets" "$dst/snippets"
   fi
 }
 

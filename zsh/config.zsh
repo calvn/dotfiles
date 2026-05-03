@@ -65,7 +65,7 @@ zle -N down-line-or-local-history
 # Partly taken from https://superuser.com/questions/446594/separate-up-arrow-lookback-for-local-and-global-zsh-history
 bindkey '^[[A' up-line-or-local-history     # Cursor up
 bindkey '^[[B' down-line-or-local-history   # Cursor down
-bindkey '^[[5~' up-line-or-beginning-search    # [ALT] + Cursor up
-bindkey '^[[6~' down-line-or-beginning-search  # [ALT] + Cursor down
+bindkey '^[[5~' up-line-or-beginning-search    # Page up (fn + Cursor up)
+bindkey '^[[6~' down-line-or-beginning-search  # Page down (fn + Cursor down)
 bindkey "^[[1;5A" up-line-or-search    # [CTRL] + Cursor up
 bindkey "^[[1;5B" down-line-or-search  # [CTRL] + Cursor down
